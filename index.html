@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Pratical Class</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #container{
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+        }
+        header img{
+                width: 200px;
+        }
+        header{
+            width: 700px;
+            height: 300px;
+            background-color: rgba(235, 227, 227, 0.066);
+            padding: 40px;
+            text-align: center;
+            box-shadow: 5px 5px 10px #8d8d8d;
+            border-radius: 20px;
+        }
+
+        header p{
+            font-size: 4rem;
+        }
+        .next{
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        header h1{
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        #container h1{
+            margin: 15px ;
+        }
+        .to{
+            font-size: 1.5rem;
+            margin: 0px 10px;
+        }
+
+        .timeing{
+            color: #b50000;
+            font-size: 1.3rem;
+        }
+        #computer{
+            margin-top: 50px;
+            /* border: 1px solid rgb(255, 255, 255); */
+            padding: 10px 50px;
+            font-size: 2rem;
+            border-radius: 50px;
+            color: rgb(255, 255, 255);
+            background-color: #8D77AB;
+        }
+        #computer1{
+            font-size: 5rem;
+            color: #939393;
+        }
+        .loading{
+            position: absolute;
+            width: 80px;
+            bottom: 80px;
+        }
+        @media(max-width:376px){
+            #container{
+            min-height: 100vh;
+            min-width: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* background-color: #b50000; */
+         }
+         body{
+            background-color: rgba(47, 0, 255, 0.059);
+         }
+         header{
+            width: 100%;
+            margin: 2px;
+         }
+         header h1{
+            font-size: 1.3rem;
+         }
+         .loading{
+            position: absolute;
+            width: 60px;
+            bottom: 193px;
+        }
+        #computer{
+            background-color: #F93827;
+            color: #fff;
+        }
+        
+        }
+
+    </style>
+</head>
+<body>
+    <section id="container">
+        <h1>Bhaskar Sir Class</h1>
+        <b><u>Now</u></b>
+        <h1> Time : 10 : 00 to 12 : 00</h1>
+        <header>    
+            <i id="computer1" class="fa-solid fa-computer"></i>
+            <h1> open The Link - To Join The Class   </h1>
+            <img class="loading" src="https://orig00.deviantart.net/1b96/f/2015/323/a/5/wolf_run_cycle_animation_beta_v2_0_1_by_nataliwf-d9h7492.png" alt="">
+            <a href="https://meet.google.com/bxi-tbdr-pti" target="_blank"><i id="computer" class="fa-solid fa-video"></i></a>
+            <br><br><br>
+            
+        </header>
+        <p id="wait"></p> <Span class="timeing">Time : 01 : 00   <span class="to"> to</span>   03 : 00</Span>
+
+    </section>
+
+    <script>
+
+        // let video = document.getElementById('join-the-calss');
+        let wait = document.getElementById('wait')
+        let container1 = document.getElementById('container')
+
+        function timeChaker(){
+            let time = new Date();
+            if(time.getHours()>=10 && time.getHours()<=12){
+                container1.innerHTML = `
+                    <h1>Bhaskar Sir Class</h1>
+                    <b><u>Now</u></b>
+                    <h1> Time : 10 : 00 to 12 : 00</h1>
+                    <header>    
+                        <i id="computer1" class="fa-solid fa-computer"></i>
+                        <h1> Open The Link - To Join The Class  </h1>
+                        <a href="https://meet.google.com/bxi-tbdr-pti" target="_blank"><i id="computer" class="fa-solid fa-video"></i></a>
+                        <br><br><br>
+                        
+                    </header>
+                `
+            }
+            else if(time.getHours()>=13 && time.getHours()<=15){
+                container1.innerHTML = `
+                    <h1>Bhaskar Sir Class</h1>
+                    <b><u>Now</u></b>
+                    <h1> Time : 01 : 00 to 03 : 00</h1>
+                    <header>    
+                        <i id="computer1" class="fa-solid fa-computer"></i>
+                        <h1> Open The Link - To Join The Class </h1>
+                        <a href="https://meet.google.com/bxi-tbdr-pti" target="_blank"><i id="computer" class="fa-solid fa-video"></i></a>
+                        <br><br><br>
+                        
+                    </header>
+                `
+            }
+            else if(time.getHours()>=15 && time.getHours()<=17){
+                container1.innerHTML = `
+                    <h1>Bhaskar Sir Class</h1>
+                    <b><u>Now</u></b>
+                    <h1> Time : 03 : 00 to 05 : 00</h1>
+                    <header>    
+                        <i id="computer1" class="fa-solid fa-computer"></i>
+                        <h1> Open The Link - To Join The Class </h1>
+                        <img class="loading" src="https://orig00.deviantart.net/1b96/f/2015/323/a/5/wolf_run_cycle_animation_beta_v2_0_1_by_nataliwf-d9h7492.png" alt="">
+                        <a href="https://meet.google.com/bxi-tbdr-pti" target="_blank"><i id="computer" class="fa-solid fa-video"></i></a>
+                        <br><br><br>
+                        
+                    </header>
+                `
+            }
+            else if(time.getHours()>=17 && time.getHours()<=19){
+                container1.innerHTML = `
+                    <h1>Bhaskar Sir Class</h1>
+                    <b><u>Now</u></b>
+                    <h1> Time : 05 : 00 to 07 : 00</h1>
+                    <header>    
+                        <i id="computer1" class="fa-solid fa-computer"></i>
+                        <h1> Open The Link - To Join The Class  </h1>
+                        <a href="https://meet.google.com/bxi-tbdr-pti" target="_blank"><i id="computer" class="fa-solid fa-video"></i></a>
+                        <br><br><br>
+                        
+                    </header>
+                `
+            }
+            else{
+                wait.innerHTML = `
+                    <h1 class='next'> Wait For Next Class </h1>
+                `
+            }
+            console.log(time.getHours());
+        }
+        timeChaker()
+
+        var timers =  setInterval(timeChaker, 1000);
+        
+    </script>
+</body>
+</html>
